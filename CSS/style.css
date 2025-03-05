@@ -21,6 +21,12 @@ body {
   background-color: var(--pink);
 }
 
+@media (max-width: 650px) {
+  body {
+    padding: 60px 0;
+  }
+}
+
 .background {
   position: absolute;
   top: 0;
@@ -33,13 +39,28 @@ body {
   z-index: 1;
 }
 
+@media (max-width: 650px) {
+  .background {
+    height: 232px;
+    background-image: url("/images/background-pattern-mobile.svg");
+  }
+}
+
 .card {
   position: relative;
-  padding: 60px 50px;
+  padding: 60px 50px 10px;
   background-color: var(--white);
   border-radius: 14px;
   width: 640px;
   z-index: 2;
+}
+
+@media (max-width: 650px) {
+  .card {
+    padding: 25px 20px 5px;
+    border-radius: 10px;
+    width: 300px;
+  }
 }
 
 .heading-box {
@@ -52,6 +73,17 @@ body {
   font-size: 66px;
   color: var(--dark-purpel);
 }
+
+@media (max-width: 650px) {
+  .heading-box {
+    gap: 17px;
+    margin-bottom: 16px;
+  }
+  .heading-box h1 {
+    font-size: 29px;
+  }
+}
+
 
 .box:not(:last-of-type) {
   border-bottom: 1px solid rgb(80 79 80 / 30%);
@@ -67,8 +99,14 @@ body {
   font-weight: 700;
 }
 
-.box:last-of-type .question {
-  padding-bottom: 0;
+@media (max-width: 650px) {
+  .question {
+    padding: 20px 0;
+    font-size: 13px;
+  }
+  .question p {
+    max-width: 80%;
+  }
 }
 
 .question img {
@@ -84,4 +122,12 @@ body {
 
 .none {
   display: none;
+}
+
+@media (max-width: 650px) {
+  .answer {
+    padding-bottom: 15px;
+    line-height: 1.5;
+    font-size: 13px;
+  }  
 }
